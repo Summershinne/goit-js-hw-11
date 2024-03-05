@@ -11,7 +11,7 @@ const form = document.querySelector("#searchForm");
 const container = document.querySelector(".gallery");
 
 form.addEventListener("submit", onSubmit);
-
+let searchQuery = "";
 function onSubmit(event) {
     event.preventDefault();
     searchQuery = form.elements.searchQuery.value.trim();
