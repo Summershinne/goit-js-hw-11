@@ -14,5 +14,5 @@ import{i as l,S as u}from"./assets/vendor-5b791d57.js";(function(){const r=docum
                     </div>
                 </a>
             </li>
-            </ul>`).join("");container.innerHTML=r}const c=document.querySelector("#searchForm"),i=document.querySelector(".gallery");c.addEventListener("submit",h);function h(n){n.preventDefault(),searchQuery=c.elements.searchQuery.value.trim(),i.innerHTML="",d(query).then(r=>{i.insertAdjacentHTML("beforeend",m(r)),new u(".gallery a",{nav:!0,captions:!0,captionsData:"alt",captionDelay:200}).refresh()}).catch(r=>{console.log(r)})}
+            </ul>`).join("");container.innerHTML=r}const c=document.querySelector("#searchForm"),i=document.querySelector(".gallery");c.addEventListener("submit",h);function h(n){n.preventDefault(),c.elements.searchQuery.value.trim(),i.innerHTML="",d(query).then(r=>{i.insertAdjacentHTML("beforeend",m(r)),new u(".gallery a",{nav:!0,captions:!0,captionsData:"alt",captionDelay:200}).refresh()}).catch(r=>{console.log(r)})}
 //# sourceMappingURL=commonHelpers.js.map
