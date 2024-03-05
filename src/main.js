@@ -14,7 +14,7 @@ form.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
     event.preventDefault();
-    const query = form.elements.searchQuery.value.trim();
+    searchQuery = form.elements.searchQuery.value.trim();
     container.innerHTML = "";
     getImages(query)
     .then(images => {
