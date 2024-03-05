@@ -8,8 +8,25 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- <section class="section">
+      <div class="form">
+        <input
+          class="search-settings"
+          type="text"
+          placeholder="Search images..."
+        />
+        <button class="button" type="submit">Search</button>
+      </div>
+      <ul class="images-list"></ul> -->
+
+      <form class="search-form" id="searchForm">
+            <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+            <button type="submit">Search</button>
+        </form>
+        <div class="gallery">
+            <!-- Картки зображень -->
+        </div>
+    </section>
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./js/pixabay-api.js"></script>
-    <script type="module" src="./js/render-functions.js"></script>
   </body>
 </html>
