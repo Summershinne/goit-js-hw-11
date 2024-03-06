@@ -9,14 +9,16 @@ import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector("#searchForm");
 const container = document.querySelector(".gallery");
-
-form.addEventListener("submit", onSubmit);
+const input = document.querySelector('[name="searchQuery"]')
 let searchQuery = "";
+form.addEventListener("submit", onSubmit);
+
 function onSubmit(event) {
     event.preventDefault();
-    searchQuery = form.elements.searchQuery.value.trim();
     container.innerHTML = "";
-    getImages(query)
+    searchQuery = input.value.trim();
+    
+    getImages(searchQuery)
     .then(images => {
             container.insertAdjacentHTML("beforeend", render(images)); 
             const lightbox =
@@ -24,12 +26,12 @@ function onSubmit(event) {
                 nav: true,
                 captions: true,
                 captionsData: 'alt',
-                captionDelay: 200,
+                captionDelay: 250,
                 })
             lightbox.refresh();
         })
         .catch (error => {
         console.log(error);
         });
-    
+   
 }
