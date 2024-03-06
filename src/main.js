@@ -16,11 +16,13 @@ form.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
     event.preventDefault();
+    load.classList.add('visually-hidden');
     container.innerHTML = "";
     searchQuery = input.value.trim();
    
     getImages(searchQuery)
-    .then(images => {
+        .then(images => {
+        load.classList.remove('visually-hidden');
             container.insertAdjacentHTML("beforeend", render(images)); 
             const lightbox =
                 new SimpleLightbox('.gallery a', {
@@ -30,6 +32,7 @@ function onSubmit(event) {
                 captionDelay: 250,
                 })
             lightbox.refresh();
+            
         })
         .catch (error => {
         console.log(error);
