@@ -13,5 +13,5 @@ import{i as u,S as d}from"./assets/vendor-5b791d57.js";(function(){const e=docum
                     </div>
                
             </div>
-            `).join("")}const y=document.querySelector("#searchForm"),i=document.querySelector(".gallery"),g=document.querySelector('[name="searchQuery"]'),c=document.querySelector(".load");let l="";y.addEventListener("submit",L);function L(o){o.preventDefault(),c.classList.add("visually-hidden"),i.innerHTML="",l=g.value.trim(),m(l).then(e=>{c.classList.remove("visually-hidden"),i.insertAdjacentHTML("beforeend",h(e)),new d(".gallery a",{nav:!0,captions:!0,captionsData:"alt",captionDelay:250}).refresh()}).catch(e=>{console.log(e)})}
+            `).join("")}const y=document.querySelector("#searchForm"),i=document.querySelector(".gallery"),g=document.querySelector('[name="searchQuery"]'),c=document.querySelector(".load");let l="";y.addEventListener("submit",v);const L=new d(".gallery a",{nav:!0,captions:!0,captionsData:"alt",captionDelay:250});function v(o){o.preventDefault(),c.classList.remove("visually-hidden"),i.innerHTML="",l=g.value.trim(),m(l).then(e=>{c.classList.add("visually-hidden"),i.insertAdjacentHTML("beforeend",h(e)),L.refresh()}).catch(e=>{console.log(e)})}
 //# sourceMappingURL=commonHelpers.js.map
