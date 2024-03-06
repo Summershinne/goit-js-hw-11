@@ -1,12 +1,12 @@
 export function render(images) {
-     return images.hits
-        .map(image => `<div class="gallery-item>
-                <a class="item-link" href="${image.largeImageURL}">
+    return images.hits
+        .map(image => `<div class="gallery-item">
+                <a class="item-link" href="${image.largeImageURL}"> 
                     <img
                         class="item-image"
                         src="${image.webformatURL}"
                         alt="${image.tags}"
-                        /> </a>
+                        /></a>
                     <div class="item-image-info">
                         <p class="info-title">Likes <span class="info-data">${image.likes}</span></p>
                         <p class="info-title">Views <span class="info-data">${image.views}</span></p>
@@ -17,5 +17,5 @@ export function render(images) {
             </div>
             `)
         .join("");
-
+    
 }

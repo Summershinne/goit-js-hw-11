@@ -13,10 +13,10 @@ export function getImages(searchQuery) {
     });
     return fetch(`${BASE_URI}?${params}`)
         .then(response => {
-        if (!response.ok) {
-            throw new Error("Search failed");
-        }
-        return response.json()
+            if (!response.ok) {
+                throw new Error("Search failed");
+            }
+            return response.json()
         })
         .then(data => {
             if (data.hits.length === 0) {
@@ -24,7 +24,8 @@ export function getImages(searchQuery) {
                     message: "Sorry, there are no images matching your search query. Please try again!",
                 });
             }
-       return data;
-    })
-    .catch(error => console.error('Error fetching data:', error))
+            return data;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    
 }

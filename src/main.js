@@ -9,7 +9,8 @@ import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector("#searchForm");
 const container = document.querySelector(".gallery");
-const input = document.querySelector('[name="searchQuery"]')
+const input = document.querySelector('[name="searchQuery"]');
+const load = document.querySelector('.load');
 let searchQuery = "";
 form.addEventListener("submit", onSubmit);
 
@@ -17,7 +18,7 @@ function onSubmit(event) {
     event.preventDefault();
     container.innerHTML = "";
     searchQuery = input.value.trim();
-    
+   
     getImages(searchQuery)
     .then(images => {
             container.insertAdjacentHTML("beforeend", render(images)); 
