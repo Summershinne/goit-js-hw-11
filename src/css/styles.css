@@ -88,3 +88,32 @@ width: calc((100% - 24px) / 4);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.search-form{
+text-align: center;
+}
+input{
+  width: 272px;
+    height: 40px;
+    font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      color: #808080;
+      border-radius: 4px solid #808080;
+      padding-left: 10px;
+
+}
+
+button{
+  border-radius: 8px;
+    padding: 8px 16px;
+    width: 91px;
+    height: 40px;
+    background: #4e75ff;
+    font-family: var(--font-family);
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      color: #fff;
+      border-style: none;
+}

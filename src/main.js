@@ -25,7 +25,6 @@ function onSubmit(event) {
     load.classList.remove('visually-hidden');
     container.innerHTML = "";
     searchQuery = input.value.trim();
-   
     getImages(searchQuery)
         .then(images => {
         load.classList.add('visually-hidden');

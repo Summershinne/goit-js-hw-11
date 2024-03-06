@@ -1,5 +1,5 @@
 export function render(images) {
-    return images.hits
+const murckup = images.hits
         .map(image => `<div class="gallery-item">
                 <a class="item-link" href="${image.largeImageURL}"> 
                     <img
@@ -16,6 +16,6 @@ export function render(images) {
                
             </div>
             `)
-        .join("");
-    
+    .join("");
+    return  murckup
 }
